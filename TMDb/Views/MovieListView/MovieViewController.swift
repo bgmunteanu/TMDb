@@ -36,6 +36,7 @@ class MovieViewController: UIViewController {
         self.overviewTextView.frame.size.height = overviewTextHeight
         
         overviewText.text = extendedMovie.text
+        view.frame.size.height = 3000
         
         fetchMovieData { (extendedResults) in
             self.shortDescriptionText.text = extendedResults.tagline
