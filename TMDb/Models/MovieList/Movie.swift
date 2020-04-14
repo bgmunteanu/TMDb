@@ -13,7 +13,7 @@ class Movie {
     
     var id: Int
     var poster: UIImage
-    var name: String
+    var title: String
     var year: String
     var rating: String
     var imageLink: String
@@ -22,7 +22,7 @@ class Movie {
     public init (id: Int, poster: UIImage, name: String, year: String, rating: String, imageLink: String) {
         self.id = id
         self.poster = poster
-        self.name = name
+        self.title = name
         self.year = year
         self.rating = rating
         self.imageLink = imageLink
@@ -30,7 +30,7 @@ class Movie {
     
     public init(id: Int, name: String, year: String, rating: String, imageLink: String) {
         self.id = id
-        self.name = name
+        self.title = name
         self.year = year
         self.rating = rating
         self.imageLink = imageLink

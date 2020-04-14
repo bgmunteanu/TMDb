@@ -18,7 +18,7 @@ class MovieCell: UITableViewCell {
     
     func setMovie(movie: Movie) {
         movieImageView.image = movie.poster
-        movieNameLabel.text = movie.name
+        movieNameLabel.text = movie.title
         movieYearLabel.text = movie.year
         movieRatingLabel.text = movie.rating
     }

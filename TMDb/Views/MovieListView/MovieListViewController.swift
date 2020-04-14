@@ -69,10 +69,7 @@ class MovieListViewController: UIViewController, UISearchBarDelegate {
                     self.movieTableView.reloadData()
                 })
             }
-            
         }
-        
-        
     }
 }
 
@@ -114,18 +111,11 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "MovieViewController") as! MovieViewController
+        let viewController = storyboard.instantiateViewController(identifier: "BetterMovieViewController") as! MovieViewController
         viewController.movie = movieDataSource.movies[indexPath.row]
         
         self.navigationController?.pushViewController(viewController, animated: true)
         
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        //        download image + cleanup
-        //        self.movieDataSource.fetchImage(from: movieDataSource.movies[indexPath.row], onCompletion: {
-        //            self.movieTableView.reloadData()
-        //        })
     }
     
 }

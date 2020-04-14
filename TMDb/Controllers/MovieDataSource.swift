@@ -134,7 +134,7 @@ class MovieDataSource {
     
     func filter(by term: String) {
         movies = movies.filter({ movie -> Bool in
-            movie.name.lowercased().contains(term.lowercased())
+            movie.title.lowercased().contains(term.lowercased())
         })
     }
     
@@ -145,8 +145,6 @@ class MovieDataSource {
             do {
                 let contents = try String(contentsOfFile: filepath)
                 apiKey = String(contents.prefix(32))
-                print(filepath)
-                print(contents)
             } catch {
             }
         }
